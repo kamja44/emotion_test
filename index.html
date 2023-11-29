@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이미지 그리드 예시</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="start-message">
+        실험이 5초 후에 시작됩니다.
+    </div>
+    <!-- 도형 선택 메시지 -->
+    <div id="select-image-message" style="display: none;">
+        2초후 6가지 도형이 표시됩니다.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;원 모형을 클릭해주세요
+    </div>
+
+    <!-- 실험 종료 메시지 -->
+    <div id="experiment-end-message" style="display: none;">
+        실험이 종료되었습니다.
+        <!-- 다운로드 버튼 -->
+        <button id="download-button">결과 다운로드</button>
+    </div>
+    <div class="image-grid">
+        <img src="./image/cir.png" class="grid-image" id="circle">
+        <img src="./image/cross.png" class="grid-image" id="cross">
+        <img src="./image/penta.png" class="grid-image" id="penta">
+        <img src="./image/rep.png" class="grid-image" id="reptangle">
+        <img src="./image/star.png" class="grid-image" id="star">
+        <img src="./image/tri.png" class="grid-image" id="triangle">
+    </div>
+    <!-- 다운로드 버튼 (초기에는 숨겨짐) -->
+    <button id="download-button" style="display: none;">결과 다운로드</button>
+
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
