@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let iterationCount = 0;
-    const maxIterations = 40;
+    const maxIterations = 10;
     let selectedImages = new Array(maxIterations).fill('Null');
     let correctSelections = new Array(maxIterations).fill(false); // 올바른 선택 여부를 저장할 배열
     let currentShape; // 현재 반복에서 선택해야 하는 도형
