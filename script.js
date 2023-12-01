@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     let iterationCount = 0;
-    const maxIterations = 10;
+    const maxIterations = 5;
     let selectedImages = new Array(maxIterations).fill('Null');
     let correctSelections = new Array(maxIterations).fill(false); // 올바른 선택 여부를 저장할 배열
     let currentShape; // 현재 반복에서 선택해야 하는 도형
     let autoAdvanceTimeout;
     const imageElements = [
         '<img src="./image/cir.png" class="grid-image" id="circle">',
-        '<img src="./image/cross.png" class="grid-image" id="cross">',
+        // '<img src="./image/cross.png" class="grid-image" id="cross">',
         '<img src="./image/penta.png" class="grid-image" id="penta">',
         '<img src="./image/rep.png" class="grid-image" id="reptangle">',
         '<img src="./image/star.png" class="grid-image" id="star">',
@@ -21,10 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
         '사각형': 'reptangle',
         '오각형': 'penta',
         '별': 'star',
-        '십자가': 'cross'
+        // '십자가': 'cross'
     };
 
-    const shapes = ['원', '삼각형', '사각형', '오각형', '별', '십자가'];
+    // const shapes = ['원', '삼각형', '사각형', '오각형', '별', '십자가'];
+    const shapes = ['원', '삼각형', '사각형', '오각형', '별'];
 
     function getRandomShape() {
         const randomIndex = Math.floor(Math.random() * shapes.length);
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateSelectImageMessage() {
         currentShape = getRandomShape();
-        document.getElementById('select-image-message').innerHTML = `2초 후 6가지 도형이 표시됩니다.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${currentShape} 모형을 클릭해주세요.`;
+        document.getElementById('select-image-message').innerHTML = `2초 후 5가지 도형이 표시됩니다.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${currentShape} 모형을 클릭해주세요.`;
     }
 
     function shuffleArray(array) {
